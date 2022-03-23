@@ -1,0 +1,116 @@
+Looking for file extensions: ['.gml', '.sparse6', '.graph6']
+samplecount is 20
+gecici/datan2000deg100
+smw
+rds
+lpa
+dmc
+gecici/datan2000deg20
+lpa
+dmc
+rds
+smw
+gecici/datan126deg10
+dmc
+lpa
+smw
+rds
+gecici/datan500deg50
+lpa
+dmc
+smw
+rds
+gecici/datan126deg6
+lpa
+dmc
+smw
+rds
+gecici/datan1000deg10
+lpa
+dmc
+smw
+rds
+undirected_ff
+gecici/datan126deg26
+lpa
+smw
+gecici/datan1000deg50
+lpa
+dmc
+rds
+smw
+gecici/datan500deg26
+smw
+lpa
+gecici/datan2000deg250
+smw
+rds
+lpa
+dmc
+gecici/datan1000deg100
+lpa
+dmc
+rds
+smw
+gecici/datan500deg10
+smw
+rds
+dmc
+lpa
+Data gecici/datan2000deg100
+smw : 10
+rds : 1
+lpa : 0
+dmc : 0
+Data gecici/datan2000deg20
+lpa : 1
+dmc : 13
+rds : 1
+smw : 10
+Data gecici/datan126deg10
+dmc : 74
+lpa : 1
+smw : 10
+rds : 1
+Data gecici/datan500deg50
+lpa : 0
+dmc : 0
+smw : 10
+rds : 1
+Data gecici/datan126deg6
+lpa : 1
+dmc : 138
+smw : 10
+rds : 1
+Data gecici/datan1000deg10
+lpa : 1
+dmc : 58
+smw : 10
+rds : 1
+undirected_ff : 3
+Data gecici/datan126deg26
+lpa : 1
+smw : 10
+Data gecici/datan1000deg50
+lpa : 0
+dmc : 0
+rds : 1
+smw : 10
+Data gecici/datan500deg26
+smw : 10
+lpa : 0
+Data gecici/datan2000deg250
+smw : 10
+rds : 1
+lpa : 1
+dmc : 0
+Data gecici/datan1000deg100
+lpa : 1
+dmc : 0
+rds : 1
+smw : 10
+Data gecici/datan500deg10
+smw : 10
+rds : 1
+dmc : 59
+lpa : 1
