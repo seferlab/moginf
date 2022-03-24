@@ -1,6 +1,7 @@
 import os
 import random
 import networkx as nx
+from networkx.algorithms import community
 
 def makeGraph(fpath):
     """ makes graph out of file
@@ -33,7 +34,13 @@ def generateHumanContactNetwork():
     outpath = "human_contact_network.edgelist"
     nx.write_edgelist(G, outpath, data=False)
 
-    
+    communities = community.greedy_modularity_communities(G)
+    communitypath = "human_contact_network.community"
+    with open(communitypath, "w") as outfile:
+        for community in communities:
+            outfile.write("\t".join([str(node) for node in community])+"\n")
+
+            
 def generateLFRBenchmark(count):
     """ generates count LFR synethetic networks
     """
@@ -51,9 +58,22 @@ def generateLFRBenchmark(count):
         max_degree = random.randint(max_degree_lower, max_degree_upper)
         mu = random.choice(mus)
         G = nx.LFR_benchmark_graph(node_count, tau1, tau2, mu, min_degree=min_degree, max_degree=max_degree)
-        
+
+        all_nodes = set(G.nodes())
+        communities = []
+        while len(all_nodes):
+            v = list(all_nodes)[0]
+            nodes = list(G.nodes[v]["community"])
+            communities.append(nodes)
+            all_nodes -= set(nodes)
+
         outpath = "lfr_benchmark/lfr{0}.edgelist".format(index)
         nx.write_edgelist(G, outpath, data=False)
+
+        communitypath = "lfr_benchmark/lfr{0}.community".format(index)
+        with open(communitypath, "w") as outfile:
+            for community in communities:
+                outfile.write("\t".join([str(node) for node in community])+"\n")
 
     
 #generateHumanContactNetwork()
