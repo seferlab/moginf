@@ -910,8 +910,11 @@ if __name__ == "__main__":
                 cPickle.dump(missingcompleteuptocount,outfile)
                 outfile.close()
 
-                print "submitting {0}".format(dumppath)    
+                #print "submitting {0}".format(dumppath)    
                 code="python offlinegraphinferencepart.py {0}".format(dumppath)
+                import sys
+                sys.exit(1)
+                
                 #code="runCmd --nowait -- " + code
                 #os.system(code)
                 #continue
